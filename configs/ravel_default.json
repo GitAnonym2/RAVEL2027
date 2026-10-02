@@ -1,0 +1,62 @@
+{
+  "spectral": {
+    "fs_hz": 500.0,
+    "epoch_pre_s": 1.0,
+    "epoch_post_s": 2.0,
+    "lowpass_hz": 100.0,
+    "lowpass_order": 4,
+    "notch_hz": 60.0,
+    "notch_q": 30.0,
+    "fmin_hz": 6.0,
+    "fmax_hz": 80.0,
+    "line_guard_low_hz": 58.0,
+    "line_guard_high_hz": 62.0,
+    "window_seconds": 0.4,
+    "window_step_seconds": 0.25,
+    "multitaper_nw": 2.5,
+    "multitaper_k": 3,
+    "axis_lags_ms": [-30.0, -20.0, -10.0, 0.0, 10.0, 20.0, 30.0]
+  },
+  "split": {
+    "train_fraction": 0.6,
+    "val_select_fraction": 0.1,
+    "val_gate_fraction": 0.1,
+    "test_fraction": 0.2,
+    "minimum_validation_trials": 3
+  },
+  "model": {
+    "nuisance_degree": 2,
+    "nuisance_residue_rank": 1,
+    "motif_residue_rank": 1,
+    "ridge": 0.002,
+    "residual_shrinkage": 0.25,
+    "coefficient_sweeps": 4,
+    "recruitment_alternations": 3,
+    "recruitment_max": 3.0,
+    "recruitment_ridge_relative": 0.04,
+    "recruitment_smooth_relative": 0.2
+  },
+  "optimization": {
+    "delay_min_ms": 2.0,
+    "delay_max_ms": 45.0,
+    "pole_min_hz": 5.0,
+    "pole_max_hz": 75.0,
+    "minimum_motif_separation_ms": 1.5,
+    "restart_delay_jitter_ms": 3.0,
+    "restart_log_pole_jitter": 0.15,
+    "lock_restarts": 4,
+    "pooled_restarts": 3,
+    "independent_restarts": 3,
+    "lock_delay_steps_ms": [4.0, 2.0, 1.0],
+    "pooled_delay_steps_ms": [2.0, 1.0],
+    "independent_delay_steps_ms": [6.0, 3.0, 1.0],
+    "minimum_restart_support": 0.75,
+    "minimum_atom_shape_similarity": 0.9,
+    "maximum_atom_delay_mad_ms": 3.0,
+    "noninferiority_fraction": 0.1
+  },
+  "base_seed": 20260921,
+  "version": "1.0.0",
+  "preset_name": "paper_reference"
+}
+

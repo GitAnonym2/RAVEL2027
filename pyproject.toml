@@ -1,0 +1,23 @@
+[build-system]
+requires = ["setuptools>=68", "wheel"]
+build-backend = "setuptools.build_meta"
+
+[project]
+name = "ravel-neural-communication"
+version = "1.0.0"
+description = "RAVEL: reusable delayed propagation components with dynamic recruitment"
+readme = "README.md"
+requires-python = ">=3.10"
+dependencies = [
+  "numpy>=1.24",
+  "pandas>=1.5",
+  "scipy>=1.10",
+]
+
+[project.optional-dependencies]
+plots = ["matplotlib>=3.7"]
+allen = ["allensdk>=2.16"]
+
+[tool.setuptools.packages.find]
+where = ["."]
+include = ["ravel*"]

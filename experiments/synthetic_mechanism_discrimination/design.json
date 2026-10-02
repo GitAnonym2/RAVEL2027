@@ -1,0 +1,51 @@
+{
+  "protocol": "FIGURE2_MECHANISM_DISCRIMINATION_v1",
+  "purpose": "mechanism discrimination between dynamic recruitment and dynamic transmission delay",
+  "default_seeds": [
+    271101,
+    271102,
+    271103
+  ],
+  "n_trials": 40,
+  "sampling_hz": 500,
+  "epoch_seconds": [
+    -1.0,
+    2.0
+  ],
+  "channels_per_region": 6,
+  "truth_components": 2,
+  "ravel_M": 2,
+  "matched_dynamic_components": 2,
+  "adm_K_grid": [
+    1,
+    2,
+    3
+  ],
+  "adm_selection": "minimum mean native marginal NLL across val_select and val_gate; TEST unopened during selection",
+  "stable_recruitment_truth": {
+    "delays_ms": [
+      9.5,
+      21.5
+    ],
+    "poles_hz": [
+      45.0,
+      45.0
+    ],
+    "dynamic_recruitment": true
+  },
+  "dynamic_delay_truth": {
+    "delay_start_ms": [
+      7.5,
+      19.0
+    ],
+    "delay_end_ms": [
+      14.0,
+      27.0
+    ],
+    "poles_hz": [
+      45.0,
+      45.0
+    ],
+    "static_gains": true
+  }
+}
